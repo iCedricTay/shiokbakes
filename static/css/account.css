@@ -1,0 +1,117 @@
+/* Account page styles – cozy, matching global theme */
+
+.account-wrap {
+  width: min(var(--wrap), 95%);
+  margin: 10px auto 40px;
+}
+
+.tabbar {
+  display: inline-flex;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+}
+
+.tab {
+  background: transparent;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: var(--pill-bg);
+}
+
+.tab.active {
+  background: var(--pill-active);
+  color: var(--pill-text-active);
+}
+
+.panel {
+  margin-top: 10px;
+}
+
+.panel.hidden {
+  display: none;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+}
+
+.pw-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pw-wrap input {
+  flex: 1;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.error {
+  margin-top: 10px;
+  color: #9b1c1c;
+  background: #fdecec;
+  border: 1px solid #f8caca;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.hint {
+  margin-top: 10px;
+  color: var(--muted);
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShiokBakes</title>
+
+  <!-- Favicon (jpeg) -->
+  <link rel="icon" type="image/jpeg" href="/static/images/favicon.jpeg">
+  <link rel="shortcut icon" href="/static/images/favicon.jpeg" type="image/jpeg">
+
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+
+<body class="home">
+  <!-- Header (shared) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="ShiokBakes Home">
+          <img src="/static/images/favicon.jpeg" alt="ShiokBakes logo" class="logo-img" />
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a class="dropbtn-link" href="products.html" aria-haspopup="true" aria-expanded="false">Products ▼</a>
+          <div class="dropdown-content" role="menu" aria-label="Products">
+            <a href="products.html#cheesecake" role="menuitem">Cheesecake</a>
+            <a href="products.html#cookies" role="menuitem">Cookies</a>
+            <a href="products.html#bread" role="menuitem">Bread</a>
+          </div>
+        </div>
+
+        <a href="myorders.html" class="nav-link">My Orders</a>
+        <a href="account.html" class="nav-link">Account</a>
+
+        <div class="nav-icons" id="navIcons" style="position:relative;">
+          <!-- Search -->
+          <button class="icon-btn" aria-label="Search" id="openSearch" type="button">
+            <img src="/static/images/icons/search.svg" alt="Search" />
+          </button>
+          <div class="search-pop" id="searchPop" aria-hidden="true">
+            <input type="search" id="searchInput" placeholder="Search products... (e.g. cheesecake, cookies)" />
+            <div class="search-actions">
+              <button class="btn-cancel" id="searchCancel" type="button">Cancel</button>
+              <button class="btn-go" id="searchGo" type="button">Search</button>
+            </div>
+          </div>
+
+          <span id="userBadge" class="user-badge" aria-live="polite"></span>
+
+          <!-- Cart with badge -->
+          <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+            <img src="/static/images/icons/shopCart.svg" alt="Cart" />
+            <span id="cartCount" class="cart-badge" hidden>0</span>
+          </a>
+
+          <button id="logoutBtn" class="icon-btn" aria-label="Sign in" type="button">
+            <img id="authIcon" src="/static/images/icons/in.svg" alt="Sign in" />
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <!-- Story -->
+    <section class="story story--full" aria-labelledby="storyTitle">
+      <div class="story-inner">
+        <div class="story-card cloud-frame">
+          <h1 id="storyTitle">Our Cheesyyy Story</h1>
+          <p>
+            Say Cheese-lah was born from an unexpected journey. During my ACL tear recovery, I spent hours on YouTube
+            watching baking videos—and that’s when I fell in love with cheesecakes. They felt comforting, delicious,
+            and surprisingly easy to make. Baking quickly became more than a pastime; it gave me something meaningful
+            to focus on and lifted my spirits throughout recovery.
+          </p>
+          <p>
+            Encouraged by the compliments and support from family and friends, I began sharing my bakes. What started
+            as a small recovery hobby grew into a passion project that boosted my confidence and joy. At Say
+            Cheese-lah, every cheesecake comes with a slice of joy—and shiok-ness—to share!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video (Google Drive embed) -->
+    <section class="video-section" aria-labelledby="videoTitle">
+      <h2 id="videoTitle" class="section-title">Watch Our Journey</h2>
+
+      <!-- Responsive Google Drive embed -->
+      <div class="video-wrapper drive">
+        <iframe src="https://drive.google.com/file/d/1xGzz2XnNRuVN9ar0V2zt5Qm7vA84mEJ3/preview" title="ShiokBakes Video"
+          allow="autoplay; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <noscript>
+        <p>
+          Video preview requires JavaScript. You can
+          <a href="https://drive.google.com/file/d/1xGzz2XnNRuVN9ar0V2zt5Qm7vA84mEJ3/view" target="_blank"
+            rel="noopener">
+            open it directly on Google Drive
+          </a>.
+        </p>
+      </noscript>
+    </section>
+
+    <!-- Featured Bakes (gallery-only — no price, no add-to-cart) -->
+    <section class="products" aria-labelledby="productsTitle">
+      <h2 id="productsTitle" class="section-title">Featured Bakes</h2>
+
+      <div class="gallery-grid">
+        <!-- The Original -->
+        <article class="gallery-card">
+          <img src="/static/images/products/cheesecake.jpeg" alt="The Original Cheesecake" class="gallery-img" />
+          <div class="gallery-body">
+            <h3 class="gallery-title">The Original Cheesecake</h3>
+            <p class="gallery-desc">Creamy, tangy, and classic—our signature bite-sized cheesecake.</p>
+            <a class="btn" href="products.html#cheesecake">View in Cheesecake</a>
+          </div>
+        </article>
+
+        <!-- Matcha -->
+        <article class="gallery-card">
+          <img src="/static/images/products/matchacheesecake.jpeg" alt="Matcha Cheesecake" class="gallery-img" />
+          <div class="gallery-body">
+            <h3 class="gallery-title">Matcha Cheesecake</h3>
+            <p class="gallery-desc">Earthy matcha paired with silky cheesecake—balanced and aromatic.</p>
+            <a class="btn" href="products.html#cheesecake">View in Cheesecake</a>
+          </div>
+        </article>
+
+        <!-- Chocolate -->
+        <article class="gallery-card">
+          <img src="/static/images/products/chocolatecheesecake.jpeg" alt="Chocolate Cheesecake" class="gallery-img" />
+          <div class="gallery-body">
+            <h3 class="gallery-title">Chocolate Cheesecake</h3>
+            <p class="gallery-desc">Rich cocoa folded into our cheesecake for a fudgy, shiok finish.</p>
+            <a class="btn" href="products.html#cheesecake">View in Cheesecake</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <strong>Location:</strong> North [Woodlands]<br />
+      <span>Home Bakes</span>
+    </div>
+    <div class="footer-right">
+      <strong>Connect With Us</strong><br />
+      <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="/static/images/icons/instagram.svg" alt="Instagram" />
+        <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+
+  <!-- Safety override (if a legacy .product-card slips in on home, hide its controls) -->
+  <style>
+    body.home .product-card .options,
+    body.home .product-card .price-line,
+    body.home .product-card .add-to-cart {
+      display: none !important;
+    }
+  </style>
+</body>
+
+</html>

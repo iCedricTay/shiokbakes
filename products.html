@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products · ShiokBakes</title>
+
+  <link rel="icon" type="image/jpeg" href="/static/images/favicon.jpeg">
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+
+<body>
+  <!-- Header (shared) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="ShiokBakes Home">
+          <img src="/static/images/favicon.jpeg" alt="ShiokBakes logo" class="logo-img" />
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a class="dropbtn-link" href="products.html" aria-haspopup="true" aria-expanded="false">Products ▼</a>
+          <div class="dropdown-content" role="menu" aria-label="Products">
+            <a href="#cheesecake" role="menuitem">Cheesecake</a>
+            <a href="#cookies" role="menuitem">Cookies</a>
+            <a href="#bread" role="menuitem">Bread</a>
+          </div>
+        </div>
+
+        <a href="myorders.html" class="nav-link">My Orders</a>
+        <a href="account.html" class="nav-link">Account</a>
+
+        <div class="nav-icons" id="navIcons" style="position:relative;">
+          <button class="icon-btn" aria-label="Search" id="openSearch" type="button">
+            <img src="/static/images/icons/search.svg" alt="Search" />
+          </button>
+          <div class="search-pop" id="searchPop" aria-hidden="true">
+            <input type="search" id="searchInput" placeholder="Search products..." />
+            <div class="search-actions">
+              <button class="btn-cancel" id="searchCancel" type="button">Cancel</button>
+              <button class="btn-go" id="searchGo" type="button">Search</button>
+            </div>
+          </div>
+
+          <span id="userBadge" class="user-badge" aria-live="polite"></span>
+          <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+            <img src="/static/images/icons/shopCart.svg" alt="Cart" />
+            <span id="cartCount" class="cart-badge" hidden>0</span>
+          </a>
+          <button id="logoutBtn" class="icon-btn" aria-label="Sign in" type="button">
+            <img id="authIcon" src="/static/images/icons/in.svg" alt="Sign in" />
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <h1 class="section-title">Products</h1>
+
+    <!-- Cheesecake: full purchase cards -->
+    <section id="cheesecake" class="products" aria-labelledby="cheeseTitle">
+      <h2 id="cheeseTitle" class="section-title">Cheesecake</h2>
+
+      <div class="product-grid">
+        <!-- The Original -->
+        <article class="product-card">
+          <img src="/static/images/products/cheesecake.jpeg" alt="The Original Cheesecake" class="product-img" />
+          <div class="product-body" data-id="1" data-name="The Original Cheesecake"
+            data-img="/static/images/products/cheesecake.jpeg" data-price4="15.00" data-price6="22.00"
+            data-price12="45.00" data-piece="4.00">
+            <div class="name-qty">
+              <h3 class="product-title">The Original Cheesecake</h3>
+            </div>
+
+            <div class="options">
+              <p class="muted">Creamy, tangy, and classic—our signature bite-sized cheesecake.</p>
+
+              <div class="pack">
+                <span class="opt-label">Pack:</span>
+                <div class="pack-row">
+                  <label class="pill"><input type="radio" name="pack-1" value="4" checked>4</label>
+                  <label class="pill"><input type="radio" name="pack-1" value="6">6</label>
+                  <label class="pill"><input type="radio" name="pack-1" value="12">12</label>
+                  <label class="pill"><input type="radio" name="pack-1" value="custom">Custom</label>
+                </div>
+              </div>
+
+              <div class="boxes">
+                <label class="opt-label">Boxes:
+                  <input type="number" class="boxes-input" min="1" value="1" inputmode="numeric" />
+                </label>
+              </div>
+
+              <p class="custom-note" hidden>
+                Note: Please email
+                <a href="mailto:orders@shiokbakes.com">orders@shiokbakes.com</a>
+                for custom orders.
+              </p>
+
+              <div class="price-line">
+                <span class="unit-price" data-unit="15.00">$15.00</span>
+                <span class="times">×</span>
+                <span class="boxes-count">1</span>
+                = <strong class="total-price">$15.00</strong>
+              </div>
+            </div>
+
+            <button class="btn primary add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Matcha -->
+        <article class="product-card">
+          <img src="/static/images/products/matchacheesecake.jpeg" alt="Matcha Cheesecake" class="product-img" />
+          <div class="product-body" data-id="2" data-name="Matcha Cheesecake"
+            data-img="/static/images/products/matchacheesecake.jpeg" data-price4="19.00" data-price6="28.00"
+            data-price12="57.00">
+            <div class="name-qty">
+              <h3 class="product-title">Matcha Cheesecake</h3>
+            </div>
+
+            <div class="options">
+              <p class="muted">Earthy matcha paired with silky cheesecake—balanced and aromatic.</p>
+
+              <div class="pack">
+                <span class="opt-label">Pack:</span>
+                <div class="pack-row">
+                  <label class="pill"><input type="radio" name="pack-2" value="4" checked>4</label>
+                  <label class="pill"><input type="radio" name="pack-2" value="6">6</label>
+                  <label class="pill"><input type="radio" name="pack-2" value="12">12</label>
+                  <label class="pill"><input type="radio" name="pack-2" value="custom">Custom</label>
+                </div>
+              </div>
+
+              <div class="boxes">
+                <label class="opt-label">Boxes:
+                  <input type="number" class="boxes-input" min="1" value="1" inputmode="numeric" />
+                </label>
+              </div>
+
+              <p class="custom-note" hidden>
+                Note: Please email
+                <a href="mailto:orders@shiokbakes.com">orders@shiokbakes.com</a>
+                for custom orders.
+              </p>
+
+              <div class="price-line">
+                <span class="unit-price" data-unit="19.00">$19.00</span>
+                <span class="times">×</span>
+                <span class="boxes-count">1</span>
+                = <strong class="total-price">$19.00</strong>
+              </div>
+            </div>
+
+            <button class="btn primary add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Chocolate -->
+        <article class="product-card">
+          <img src="/static/images/products/chocolatecheesecake.jpeg" alt="Chocolate Cheesecake" class="product-img" />
+          <div class="product-body" data-id="3" data-name="Chocolate Cheesecake"
+            data-img="/static/images/products/chocolatecheesecake.jpeg" data-price4="19.00" data-price6="28.00"
+            data-price12="57.00">
+            <div class="name-qty">
+              <h3 class="product-title">Chocolate Cheesecake</h3>
+            </div>
+
+            <div class="options">
+              <p class="muted">Rich cocoa folded into our cheesecake for a fudgy, shiok finish.</p>
+
+              <div class="pack">
+                <span class="opt-label">Pack:</span>
+                <div class="pack-row">
+                  <label class="pill"><input type="radio" name="pack-3" value="4" checked>4</label>
+                  <label class="pill"><input type="radio" name="pack-3" value="6">6</label>
+                  <label class="pill"><input type="radio" name="pack-3" value="12">12</label>
+                  <label class="pill"><input type="radio" name="pack-3" value="custom">Custom</label>
+                </div>
+              </div>
+
+              <div class="boxes">
+                <label class="opt-label">Boxes:
+                  <input type="number" class="boxes-input" min="1" value="1" inputmode="numeric" />
+                </label>
+              </div>
+
+              <p class="custom-note" hidden>
+                Note: Please email
+                <a href="mailto:orders@shiokbakes.com">orders@shiokbakes.com</a>
+                for custom orders.
+              </p>
+
+              <div class="price-line">
+                <span class="unit-price" data-unit="19.00">$19.00</span>
+                <span class="times">×</span>
+                <span class="boxes-count">1</span>
+                = <strong class="total-price">$19.00</strong>
+              </div>
+            </div>
+
+            <button class="btn primary add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cookies / Bread (Coming soon) -->
+    <section id="cookies" class="products" aria-labelledby="cookiesTitle">
+      <h2 id="cookiesTitle" class="section-title">Cookies <span class="badge">[Coming Soon]</span></h2>
+      <div class="product-grid">
+        <p class="muted">New cookie flavours are baking in the oven! Stay tuned 🍪</p>
+      </div>
+    </section>
+
+    <section id="bread" class="products" aria-labelledby="breadTitle">
+      <h2 id="breadTitle" class="section-title">Bread <span class="badge">[Coming Soon]</span></h2>
+      <div class="product-grid">
+        <p class="muted">Fresh breads rising soon. Watch this space 🥖</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <strong>Location:</strong> North [Woodlands]<br />
+      <span>Home Bakes</span>
+    </div>
+    <div class="footer-right">
+      <strong>Connect With Us</strong><br />
+      <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="/static/images/icons/instagram.svg" alt="Instagram" />
+        <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
