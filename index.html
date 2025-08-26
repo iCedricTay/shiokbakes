@@ -39,7 +39,6 @@
         <a href="account.html" class="nav-link">Account</a>
 
         <div class="nav-icons" id="navIcons" style="position:relative;">
-          <!-- Search -->
           <button class="icon-btn" aria-label="Search" id="openSearch" type="button">
             <img src="/static/images/icons/search.svg" alt="Search" />
           </button>
@@ -53,7 +52,6 @@
 
           <span id="userBadge" class="user-badge" aria-live="polite"></span>
 
-          <!-- Cart with badge -->
           <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
             <img src="/static/images/icons/shopCart.svg" alt="Cart" />
             <span id="cartCount" class="cart-badge" hidden>0</span>
@@ -68,49 +66,21 @@
   </header>
 
   <main class="page-content">
-    <!-- Story -->
-    <section class="story story--full" aria-labelledby="storyTitle">
-      <div class="story-inner">
-        <div class="story-card cloud-frame">
-          <h1 id="storyTitle">Our Cheesyyy Story</h1>
-          <p>
-            Say Cheese-lah was born from an unexpected journey. During my ACL tear recovery, I spent hours on YouTube
-            watching baking videos—and that’s when I fell in love with cheesecakes. They felt comforting, delicious,
-            and surprisingly easy to make. Baking quickly became more than a pastime; it gave me something meaningful
-            to focus on and lifted my spirits throughout recovery.
-          </p>
-          <p>
-            Encouraged by the compliments and support from family and friends, I began sharing my bakes. What started
-            as a small recovery hobby grew into a passion project that boosted my confidence and joy. At Say
-            Cheese-lah, every cheesecake comes with a slice of joy—and shiok-ness—to share!
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Video (Google Drive embed) -->
+    <!-- 1) YouTube Video (first) -->
     <section class="video-section" aria-labelledby="videoTitle">
       <h2 id="videoTitle" class="section-title">Watch Our Journey</h2>
 
-      <!-- Responsive Google Drive embed -->
-      <div class="video-wrapper drive">
-        <iframe src="https://drive.google.com/file/d/1xGzz2XnNRuVN9ar0V2zt5Qm7vA84mEJ3/preview" title="ShiokBakes Video"
-          allow="autoplay; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      <div class="video-wrapper drive" style="max-width: 1280px; margin-inline: auto;">
+        <iframe src="https://www.youtube.com/embed/S039izbTt88?rel=0&modestbranding=1&vq=hd1080"
+          title="ShiokBakes Journey" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          allowfullscreen loading="lazy">
         </iframe>
       </div>
-
-      <noscript>
-        <p>
-          Video preview requires JavaScript. You can
-          <a href="https://drive.google.com/file/d/1xGzz2XnNRuVN9ar0V2zt5Qm7vA84mEJ3/view" target="_blank"
-            rel="noopener">
-            open it directly on Google Drive
-          </a>.
-        </p>
-      </noscript>
     </section>
 
-    <!-- Featured Bakes (gallery-only — no price, no add-to-cart) -->
+    <!-- 2) Featured Bakes (gallery-only) -->
     <section class="products" aria-labelledby="productsTitle">
       <h2 id="productsTitle" class="section-title">Featured Bakes</h2>
 
@@ -146,6 +116,27 @@
         </article>
       </div>
     </section>
+
+    <!-- 3) Our Cheesyyy Story (last) -->
+    <section class="story story--full" aria-labelledby="storyTitle">
+      <div class="story-inner">
+        <div class="story-card cloud-frame">
+          <h1 id="storyTitle">Our Cheesyyy Story</h1>
+          <p>
+            Say Cheese-lah was born from an unexpected journey. During my ACL tear recovery, I spent hours on YouTube
+            watching baking videos—and that’s when I fell in love with cheesecakes. They felt comforting, delicious,
+            and surprisingly easy to make. Baking quickly became more than a pastime; it gave me something meaningful
+            to focus on and lifted my spirits throughout recovery.
+          </p>
+          <p>
+            Encouraged by the compliments and support from family and friends, I began sharing my bakes. What started
+            as a small recovery hobby grew into a passion project that boosted my confidence and joy. At Say
+            Cheese-lah, every cheesecake comes with a slice of joy—and shiok-ness—to share!
+          </p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -164,7 +155,7 @@
 
   <script src="/static/js/main.js"></script>
 
-  <!-- Safety override (if a legacy .product-card slips in on home, hide its controls) -->
+  <!-- Safety override (if a legacy .product-card slips on home) -->
   <style>
     body.home .product-card .options,
     body.home .product-card .price-line,
